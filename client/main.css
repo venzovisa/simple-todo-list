@@ -49,31 +49,37 @@ form {
   position: relative;
 }
 
+button {
+  border-radius: 5px;
+}
+
 .new-task input {
   box-sizing: border-box;
-  padding: 10px 0;
+  padding: 10px 80px 10px 5px;
   background: transparent;
   border: none;
   width: 100%;
-  padding-right: 80px;
   font-size: 1em;
 }
 
 .new-task input:focus{
   outline: 0;
+  border: 2px solid #315481;
+  border-radius: 5px;
+  cursor: hand;
 }
 
 ul {
   margin: 0;
   padding: 0;
-  background: white;
+  /*background: white;*/
 }
 
 .delete {
   float: right;
   font-weight: bold;
   background: none;
-  font-size: 1em;
+  font-size: 2em;
   border: none;
   position: relative;
 }
@@ -81,12 +87,20 @@ ul {
 li {
   position: relative;
   list-style: none;
-  padding: 15px;
+  padding: 15px 15px 15px 60px;
   border-bottom: #eee solid 1px;
+  background-image: url("tasks_background.jpg");
+  background-size: cover;
+}
+
+li:hover {
+  background: darkorange none;
+  color: #ffffff;
 }
 
 li .text {
-  margin-left: 10px;
+  margin-left: 20px;
+  font-style: italic;
 }
 
 li.checked {
@@ -98,8 +112,13 @@ li.checked .text {
 }
 
 li.private {
-  background: #eee;
-  border-color: #ddd;
+  background-image: url("tasks_background.jpg");
+  background-size: cover;
+}
+
+li.private:hover {
+  background: darkorange none;
+  color: #ffffff;
 }
 
 header .hide-completed {
@@ -111,9 +130,6 @@ header .hide-completed {
 }
 
 @media (max-width: 600px) {
-  li {
-    padding: 12px 15px;
-  }
 
   .search {
     width: 150px;

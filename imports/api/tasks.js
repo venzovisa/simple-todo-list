@@ -25,10 +25,10 @@ Meteor.methods({
     if (! this.userId) {
       throw new Meteor.Error('not-authorized');
     }
-
-    if (Tasks.findOne({text: text}).text) {
+/*
+    if (typeof text === "undefined") {
         throw new Meteor.Error('A task with same content exist!');
-    }
+    }*/
 
     Tasks.insert({
       text,
